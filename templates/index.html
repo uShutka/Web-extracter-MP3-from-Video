@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract MP3 from Video</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+		<!-- Header -->
+        <h1 class="my-5">Extract MP3 from Video</h1>
+
+		<!-- Form -->
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <input type="file" name="file" class="form-control-file" accept=".mp4,.mov,.avi">
+            </div>
+            <button type="submit" class="btn btn-primary">Extract MP3</button>
+        </form>
+
+		<!-- Success message -->
+        {% if audio %}
+			<div class="alert alert-success my-3" role="alert">
+				<p>Your MP3 file is ready to download:</p>
+				<a href="/?file={{ file }}" class="btn btn-success">Download MP3</a>
+			</div>
+        {% endif %}
+
+		<!-- Error message -->
+		{% if error %}
+		<div class="alert alert-warning my-3" role="alert">
+			<h3>An error occurred!</h3>
+			<p>Wrong file format or file has not been uploaded</p>
+		</div>
+		{% endif %}
+    </div>
+</body>
+</html>

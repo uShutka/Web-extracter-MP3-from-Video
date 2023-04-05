@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        cursor: pointer;
+    }
+
+    .alert {
+        margin-top: 20px;
+    }
+
+    .alert p {
+        margin-bottom: 10px;
+    }
