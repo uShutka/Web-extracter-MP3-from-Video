@@ -12,6 +12,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * Python 3.6 or higher
 * Flask
+* Moviepy
 
 ### Installation
 
@@ -21,10 +22,10 @@ These instructions will get you a copy of the project up and running on your loc
     git clone https://github.com/your_username/web-extractor-mp3.git
     ```
     
-2. Install Flask:
+2. Install packages:
 
     ```
-    pip install flask
+    pip install -r requirements.txt
     ```
     
 3. Run the application:
@@ -45,6 +46,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * [Python](https://www.python.org/) - Programming language
 * [Flask](https://flask.palletsprojects.com/) - Web framework
+* [Moviepy](https://zulko.github.io/moviepy/) - Module
 
 ## Authors
 
